@@ -130,7 +130,6 @@ export class Play extends Phaser.Scene
     {
         // Phaser random array position
         const gridCardNames = Phaser.Utils.Array.Shuffle([...this.cardNames, ...this.cardNames]);
-
         return gridCardNames.map((name, index) => {
             const newCard = createCard({
                 scene: this,

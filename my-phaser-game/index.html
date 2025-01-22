@@ -12,6 +12,27 @@
     <div id="app">
         <div id="game-container"></div>
     </div>
+    <h1>Formulaire de Configuration du Jeu de Cartes</h1>
+
+    <form id="card-form" enctype="multipart/form-data">
+        <!-- Champ caché pour le nombre de cartes face cachée -->
+        <input type="hidden" id="num-hidden-cards" name="num-hidden-cards" value="0">
+        
+        <div id="hidden-cards-container">
+        <!-- Les champs de fichiers dynamiques seront ajoutés ici -->
+        </div>
+        
+        <label for="card-back">Choisir l'image du dos des cartes :</label>
+        <input type="file" id="card-back" name="card-back" accept="image/*">
+        <br>
+        
+        <button type="button" id="add-hidden-card">Ajouter une image de carte face cachée</button>
+        <br><br>
+        
+        <button type="submit">Valider</button>
+    </form>
+        <!-- Conteneur pour les aperçus des images -->
+    <div id="image-preview-container"></div>
     <script type="module" src="src/main.js"></script>
 </body>
 </html>
